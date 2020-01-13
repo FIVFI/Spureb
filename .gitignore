@@ -31,3 +31,4 @@ build/
 .vscode/
 /src/main/resources/static/theme/home.css
 /.mvn/
+/log/
