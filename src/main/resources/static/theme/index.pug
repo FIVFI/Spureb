@@ -1,0 +1,64 @@
+//-Jade Mixins
+
+mixin card(number, name) 
+  .card
+    .number
+      span #{number}
+    .img
+    .product-name
+      span #{name}
+    .overlay
+      .detail
+        span Details
+        span.fa.fa-pencil
+
+
+//- End of Mixins
+
+.container
+  .box
+  
+    .left-bar
+      span.fa.fa-cloud-download
+      
+      .menu-group     
+        span.fa.fa-television
+        span.fa.fa-shopping-cart.active
+        
+        .building
+          span.fa.fa-building
+          span.fa.fa-building
+          
+        span.fa.fa-cog
+      span.fa.fa-sign-out
+    .wrapper    
+      .top-bar
+        span.cloud Cloud Inventory
+
+        .cta-button
+          span +
+      .content
+
+        .menu
+          .search
+            label 
+              span.fa.fa-search
+            input( placeholder= 'Search Items')
+          .list-info
+            span 29 Items
+            span.fa.fa-bars
+            span.fa.fa-th-large
+      .grid  
+        +card('1', 'Air Nike Tenis')
+        +card('2', 'Nike T-Shirt Black')
+        +card('3', 'Air Nike Tenis')
+        +card('4', 'Air Nike Tenis')
+        +card('5', 'Air Nike Tenis')
+        +card('6', 'Air Nike Tenis')
+        +card('7', 'Air Nike Tenis')
+        +card('8', 'Air Nike Tenis')
+        +card('9', 'Air Nike Tenis')
+        +card('10', 'Air Nike Tenis')
+        +card('11', 'Air Nike Tenis')
+        +card('12', 'Air Nike Tenis')
+    

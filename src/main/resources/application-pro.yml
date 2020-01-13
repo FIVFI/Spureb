@@ -1,0 +1,47 @@
+server:
+    port: 443
+    http:
+      port: 1122
+    ssl:
+      key-store: classpath:3019120_rfid.zanrun.net.pfx
+      key-store-password: IYsY3g68
+      key-store-type: PKCS12
+logging:
+    config: classpath:logback.xml
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://rm-bp104o1iq86b1a6n9o.mysql.rds.aliyuncs.com:3306/a_transition?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useAffectedRows=true
+        username: root
+        password: zanrunA05
+        redis:
+            database: 0
+            host: localhost
+            port: 6379
+            password:
+            lettuce:
+                pool:
+                    max-active: 8
+                    max-idle: 8
+                    max-wait: -1ms
+                    min-idle: 0
+            timeout: 100ms
+    servlet:
+        multipart:
+            enabled: true
+            max-file-size: 100MB
+            max-request-size: 100MB
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates
+        suffix: .html
+        mode: LEGACYHTML5
+mybatis-plus:
+    mapper-locations: classpath:com/spureb/willow/mapper/**/*.xml
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+beetlsql:
+    enabled: false
+upload:
+    path:
+        app: ./download/

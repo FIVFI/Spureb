@@ -1,0 +1,44 @@
+server:
+  port: 8080
+  http:
+    port: 1408
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/a_spureb_box?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useAffectedRows=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    redis:
+      database: 0
+      host: localhost
+      port: 6379
+      password:
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          max-wait: -1ms
+          min-idle: 0
+      timeout: 100ms
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates
+    suffix: .html
+    mode: LEGACYHTML5
+  freemarker:
+    suffix: .ftlh
+mybatis-plus:
+  mapper-locations: classpath:com/spureb/willow/mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+beetlsql:
+  enabled: false
+upload:
+  path:
+    app: ./download/
+
