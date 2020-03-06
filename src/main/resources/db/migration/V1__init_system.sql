@@ -117,4 +117,4 @@ insert into sys_company(id, company_name, company_type, contacts)
 values (1, 'fivfi', 'platform', 'FIVFI');
 
 insert into sys_user(id, user_account, user_password, user_name, company_id)
-values (1, 'FIVFI', '123', 'spureb', 1);
+values (1001, 'Spureb', '123', 'spureb', 1),(1002, 'Yesion Hu', '123', 'Yesion Hu', 1);

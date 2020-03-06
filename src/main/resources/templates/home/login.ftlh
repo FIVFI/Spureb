@@ -6,9 +6,6 @@
   <link rel="stylesheet" href="/static/theme/login/style.css" media="all">
   <link rel="stylesheet" href="/static/theme/login/fort.css" media="all">
   <link rel="stylesheet" href="/static/theme/home.css">
-  <style>
-
-  </style>
 
 </head>
 <body style="user-select: none">
@@ -22,7 +19,7 @@
     <a href="">PureBook</a>
   </div>
 
-  <form name="form" action="/login/verify" method="get">
+  <form name="form" action="/login/verify" method="get" style="margin-bottom: 100px">
     <div class="form">
       <div class="form-item">
         <input type="text" id="userId" name="userId" required="required" placeholder="账号" autocomplete="off">

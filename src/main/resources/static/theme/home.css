@@ -179,7 +179,6 @@ a {
 }
 
 .menu {
-
     height: 50px;
     display: flex;
     align-items: center;
@@ -340,8 +339,8 @@ input:focus{
 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
 {
-    width:8px;
-    height:16px;
+    width:3px;
+    height:3px;
     background-color:#F5F5F5;
 }
 /*定义滚动条轨道

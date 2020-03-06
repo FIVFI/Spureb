@@ -1,5 +1,6 @@
 package com.spureb.willow;
 
+import com.spureb.willow.entity.UserVo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 @SpringBootApplication
 @EnableScheduling
 public class WillowApplication {
+
 
     public static void main(String[] args) {
         SpringApplication.run(WillowApplication.class, args);
@@ -30,15 +32,25 @@ public class WillowApplication {
         view.setViewName("home/login");
         return view;
     }
+
     /**
      * 前端主页入口
      * @return
      */
-    @GetMapping(value = "/login/verify")
-    public ModelAndView loginVerify() {
+    @GetMapping(value = "/test/show")
+    public ModelAndView testShow() {
         ModelAndView view = new ModelAndView();
-        view.addObject("name", "xiaoming");
-        view.setViewName("index");
+        view.setViewName("home/testShow");
+        return view;
+    }
+    /**
+     * 前端主页入口
+     * @return
+     */
+    @GetMapping(value = "/hint/show")
+    public ModelAndView hintShow() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("home/hintShow");
         return view;
     }
 }
