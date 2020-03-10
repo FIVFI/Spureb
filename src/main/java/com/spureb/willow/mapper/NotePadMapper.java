@@ -1,8 +1,6 @@
 package com.spureb.willow.mapper;
 
-import com.spureb.willow.base.BaseResponse;
 import com.spureb.willow.entity.NoteResourceVo;
-import com.spureb.willow.entity.ResourceVo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

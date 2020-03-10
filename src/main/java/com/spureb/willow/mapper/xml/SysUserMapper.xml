@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spureb.willow.mapper.SysUserMapper">
+
+    <select id="queryUserByVo" resultType="com.spureb.willow.entity.UserVo">
+        select u.id as userId,u.user_account ,u.user_name,u.password as userPassword,u.user_phone,u.create_date,u.update_date from
+        sys_user u
+        <where>
+            <if test="userAccount!=null and userAccount!=''">
+                and u.user_account = #{userAccount}
+            </if>
+            <if test="userId!=null and userId!=''">
+                and u.id = #{userId}
+            </if>
+            <if test="userPhone!=null and userPhone!=''">
+                and u.user_phone = #{userPhone}
+            </if>
+        </where>
+    </select>
+
+    <select id="listSysResourcesByVo" resultType="com.spureb.willow.entity.UserMenuListVo">
+        select u.user_account ,m.id as menuId,menu_name, menu_code,menu_font,menu_url,menu_seq,parent_id from
+        link_user_menu as um
+        left join sys_menu as m on um.menu_id = m.id
+        left join sys_user as u on u.id = um.user_id
+        <where>
+            <if test="userAccount!=null and userAccount!=''">
+                and u.user_account = #{userAccount}
+            </if>
+            <if test="menuId!=null and menuId!=''">
+                and m.id = #{menuId}
+            </if>
+            <if test="menuName!=null and menuName!=''">
+                and m.menu_name like concat('%',#{menuName},'%')
+            </if>
+            <if test="parentId!=null and parentId!=''">
+                and m.parent_id = #{parentId}
+            </if>
+        </where>
+    </select>
+</mapper>

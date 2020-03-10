@@ -1,6 +1,5 @@
 package com.spureb.willow;
 
-import com.spureb.willow.entity.UserVo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,17 +20,6 @@ public class WillowApplication {
         System.out.println("http://127.0.0.1:8080/");
     }
 
-    /**
-     * 前端入口
-     * @return
-     */
-    @GetMapping(value = "/")
-    public ModelAndView login() {
-        ModelAndView view = new ModelAndView();
-        view.addObject("name", "xiaoming");
-        view.setViewName("home/login");
-        return view;
-    }
 
     /**
      * 前端主页入口

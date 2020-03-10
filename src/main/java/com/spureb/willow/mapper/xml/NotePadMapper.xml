@@ -41,7 +41,7 @@
 
     <insert id="addNotePadMyNote">
         insert into note_resource(note_title, by_author, html_content, edit_type, resource_type)
-        values (#{noteTitle}, 1001, #{htmlContent}, #{editType}, #{resourceType})
+        values (#{noteTitle}, #{byAuthor}, #{htmlContent}, #{editType}, #{resourceType})
     </insert>
 
     <update id="updateNotePadMyNote">

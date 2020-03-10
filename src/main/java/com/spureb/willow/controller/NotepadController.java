@@ -1,6 +1,7 @@
 package com.spureb.willow.controller;
 
 import com.spureb.willow.base.BaseResponse;
+import com.spureb.willow.base.BaseUserInfo;
 import com.spureb.willow.entity.NoteResourceVo;
 import com.spureb.willow.service.NoteResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ public class NotepadController {
 
     @PostMapping(value = "/add/notePad/myNote")
     public BaseResponse addNotePadMyNote(@RequestBody NoteResourceVo noteResourceVo){
+        noteResourceVo.setByAuthor(BaseUserInfo.getCurrentUser().getUserId());
         return noteResourceService.addNotePadMyNote(noteResourceVo);
     }
     @PostMapping(value = "/update/notePad/myNote")

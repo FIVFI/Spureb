@@ -1,12 +1,20 @@
 <link rel="stylesheet" href="/static/editor.md-master/css/editormd.preview.css" />
+<script src="/static/js/clipboard.min.js"></script>
+<base target="_blank">
 <body>
 <div class="headDiv">
-    <div style="position:absolute;width: 60%; left: 5%">
-        <p><strong style="color: rgba(250,250,250,0.8);font-size: 30px" id="title-h1"></strong><strong id="title-h4"></strong></p>
+    <div style="width: 60%; ">
+        <p>
+            <strong style="color: rgba(250,250,250,0.8);font-size: 30px" id="title-h1"></strong>
+
+            by <a href="/hint/show">
+                <strong id="title-h4"></strong>
+            </a>
+        </p>
     </div>
     <div style="position:absolute;width: 40%;right: 5%;text-align: right;top: 25px">
         <div class="right-box"><i style="line-height: 35px;width: 40px" class="fa fa-star"></i></div>
-        <div class="right-box"><i style="line-height: 35px;width: 40px" class="fa fa-external-link"></i></div>
+        <div id="share-show" onclick="alert('连接已复制至粘贴板')" data-clipboard-text="http://${host}/share/myNote/view?nId=${nId}" class="right-box"><i style="line-height: 35px;width: 40px" class="fa fa-external-link"></i></div>
         <div id="edit-btn" class="right-box"><i style="line-height: 35px;width: 40px" class="fa fa-edit"></i></div>
     </div>
 </div>
@@ -25,6 +33,7 @@
     let noteTitle = "";
     let noteId = "";
     $(function() {
+        new ClipboardJS('#share-show');
         $.ajax({
             url: "/query/notePad/myNoteNById?nId=${nId}",
             method: "get",
@@ -32,7 +41,7 @@
                 noteTitle = rel.data.noteTitle;
                 noteId = rel.data.noteResourceId;
                 $('#title-h1').text(rel.data.noteTitle);
-                $('#title-h4').text("by "+rel.data.authorName);
+                $('#title-h4').text(rel.data.authorName);
                 let testView = editormd.markdownToHTML("test-markdown-view", {
                     markdown : rel.data.htmlContent, // Also, you can dynamic set Markdown text
                     htmlDecode : true,  // Enable / disable HTML tag encode.
@@ -42,7 +51,6 @@
             },
             contentType:"application/json"
         });
-
     });
 
     $('#edit-btn').click(function(){
@@ -51,9 +59,14 @@
 
     $('body').dblclick(function () {
         window.parent.hideMenu();
-    })
+    });
+
 </script>
 <style>
+    body a{
+        color: #4183c4;
+        text-decoration: none;
+    }
     .markdown-body h1, .markdown-body h2 , .markdown-body hr, .markdown-body h3{
         border-bottom: 1px solid rgba(250,250,250,0.1);
     }
@@ -71,10 +84,10 @@
         margin: 4px;
     }
     #test-markdown-view{
-        width:90%;margin:auto;background-color: rgba(30, 30 ,30 ,1);color: #888888
+        width:90%;margin:auto;background-color: rgba(30, 30 ,30 ,1);color: gray;
     }
     .headDiv{
-        width:90%;margin:auto;color: rgba(250,250,250,0.8);height: 80px;
+        width:90%;margin:auto;color: rgba(250,250,250,0.8);
     }
     /*定义滚动条高宽及背景
 高宽分别对应横竖滚动条的尺寸*/

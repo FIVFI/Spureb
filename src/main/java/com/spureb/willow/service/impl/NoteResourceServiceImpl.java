@@ -3,12 +3,8 @@ package com.spureb.willow.service.impl;
 import com.spureb.willow.base.BaseErrorEnum;
 import com.spureb.willow.base.BaseResponse;
 import com.spureb.willow.entity.NoteResourceVo;
-import com.spureb.willow.entity.ResourceVo;
-import com.spureb.willow.entity.UserVo;
 import com.spureb.willow.mapper.NotePadMapper;
-import com.spureb.willow.mapper.SysFolderMapper;
 import com.spureb.willow.service.NoteResourceService;
-import com.spureb.willow.service.SysFolderService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

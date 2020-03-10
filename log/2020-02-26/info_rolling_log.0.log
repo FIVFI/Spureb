@@ -1,0 +1,95 @@
+2020-02-26 11:31:45.041  INFO PID_IS_UNDEFINED --- [           main] org.springframework.core.KotlinDetector  : Kotlin reflection implementation not found at runtime, related features won't be available.
+2020-02-26 11:31:45.602  INFO 12052 --- [           main] com.spureb.willow.WillowApplication      : Starting WillowApplication on DESKTOP-F9J6DJ5 with PID 12052 (C:\Users\25244\IdeaProjects\SpurebBox\target\classes started by 25244 in C:\Users\25244\IdeaProjects\SpurebBox)
+2020-02-26 11:31:45.603  INFO 12052 --- [           main] com.spureb.willow.WillowApplication      : The following profiles are active: dev
+2020-02-26 11:31:46.516  INFO 12052 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-26 11:31:46.519  INFO 12052 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-26 11:31:46.558  INFO 12052 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2020-02-26 11:31:46.905  INFO 12052 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3474c06e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-26 11:31:47.269  INFO 12052 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http) 1408 (http)
+2020-02-26 11:31:47.284  INFO 12052 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-26 11:31:47.293  INFO 12052 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-1408"]
+2020-02-26 11:31:47.305  INFO 12052 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-26 11:31:47.305  INFO 12052 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-02-26 11:31:47.445  INFO 12052 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-26 11:31:47.446  INFO 12052 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1772 ms
+2020-02-26 11:31:47.799  INFO 12052 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-26 11:31:48.092  INFO 12052 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-26 11:31:49.202  INFO 12052 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-02-26 11:31:49.206  INFO 12052 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/a_spureb_box (MySQL 8.0)
+2020-02-26 11:31:49.400  INFO 12052 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.057s)
+2020-02-26 11:31:49.419  INFO 12052 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `a_spureb_box`: 2
+2020-02-26 11:31:49.420  INFO 12052 --- [           main] o.f.core.internal.command.DbMigrate      : Schema `a_spureb_box` is up to date. No migration necessary.
+2020-02-26 11:31:49.555  INFO 12052 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-26 11:31:49.616  INFO 12052 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-26 11:31:49.626  INFO 12052 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-1408"]
+2020-02-26 11:31:49.635  INFO 12052 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) 1408 (http) with context path ''
+2020-02-26 11:31:49.639  INFO 12052 --- [           main] com.spureb.willow.WillowApplication      : Started WillowApplication in 4.557 seconds (JVM running for 5.925)
+2020-02-26 11:32:00.618  INFO 12052 --- [nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1578530285] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-02-26 11:32:00.641  INFO 12052 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-26 11:32:00.646  INFO 12052 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-26 11:32:00.665  INFO 12052 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-02-26 16:28:49.912  INFO PID_IS_UNDEFINED --- [           main] org.springframework.core.KotlinDetector  : Kotlin reflection implementation not found at runtime, related features won't be available.
+2020-02-26 16:28:50.584  INFO 16780 --- [           main] com.spureb.willow.WillowApplication      : Starting WillowApplication on DESKTOP-F9J6DJ5 with PID 16780 (C:\Users\25244\IdeaProjects\SpurebBox\target\classes started by 25244 in C:\Users\25244\IdeaProjects\SpurebBox)
+2020-02-26 16:28:50.585  INFO 16780 --- [           main] com.spureb.willow.WillowApplication      : The following profiles are active: dev
+2020-02-26 16:28:51.692  INFO 16780 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-26 16:28:51.694  INFO 16780 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-26 16:28:51.737  INFO 16780 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2020-02-26 16:28:52.111  INFO 16780 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$543feaa9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-26 16:28:52.503  INFO 16780 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http) 1408 (http)
+2020-02-26 16:28:52.520  INFO 16780 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-26 16:28:52.531  INFO 16780 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-1408"]
+2020-02-26 16:28:52.545  INFO 16780 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-26 16:28:52.546  INFO 16780 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-02-26 16:28:52.726  INFO 16780 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-26 16:28:52.726  INFO 16780 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2057 ms
+2020-02-26 16:28:52.966  INFO 16780 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-26 16:28:53.184  INFO 16780 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-26 16:28:54.389  INFO 16780 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-02-26 16:28:54.392  INFO 16780 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/a_spureb_box (MySQL 8.0)
+2020-02-26 16:28:54.550  INFO 16780 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.054s)
+2020-02-26 16:28:54.567  INFO 16780 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `a_spureb_box`: 2
+2020-02-26 16:28:54.568  INFO 16780 --- [           main] o.f.core.internal.command.DbMigrate      : Schema `a_spureb_box` is up to date. No migration necessary.
+2020-02-26 16:28:54.746  INFO 16780 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-26 16:28:54.830  INFO 16780 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-26 16:28:54.844  INFO 16780 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-1408"]
+2020-02-26 16:28:54.857  INFO 16780 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) 1408 (http) with context path ''
+2020-02-26 16:28:54.861  INFO 16780 --- [           main] com.spureb.willow.WillowApplication      : Started WillowApplication in 4.886 seconds (JVM running for 6.486)
+2020-02-26 16:28:55.907  INFO 16780 --- [nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1578530285; JSESSIONID=2B51DA601422D32AFDC3E773C1775A42] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-02-26 16:28:55.916  INFO 16780 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-26 16:28:55.916  INFO 16780 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-26 16:28:55.924  INFO 16780 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-02-26 16:51:30.934  INFO 16780 --- [nio-8080-exec-7] org.apache.tomcat.util.http.Parameters   : Character decoding failed. Parameter [fileName] with value [%u9879%u76EE%u8BA1%u5212%u8868.xlsx] has been ignored. Note that the name and value quoted here may be corrupted due to the failed decoding. Use debug level logging to see the original, non-corrupted values.
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+2020-02-26 23:28:01.639  INFO PID_IS_UNDEFINED --- [           main] org.springframework.core.KotlinDetector  : Kotlin reflection implementation not found at runtime, related features won't be available.
+2020-02-26 23:28:02.273  INFO 7728 --- [           main] com.spureb.willow.WillowApplication      : Starting WillowApplication on DESKTOP-F9J6DJ5 with PID 7728 (C:\Users\25244\IdeaProjects\SpurebBox\target\classes started by 25244 in C:\Users\25244\IdeaProjects\SpurebBox)
+2020-02-26 23:28:02.273  INFO 7728 --- [           main] com.spureb.willow.WillowApplication      : The following profiles are active: dev
+2020-02-26 23:28:03.529  INFO 7728 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-26 23:28:03.532  INFO 7728 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-26 23:28:03.577  INFO 7728 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2020-02-26 23:28:03.977  INFO 7728 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46d8567f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-26 23:28:04.377  INFO 7728 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http) 1408 (http)
+2020-02-26 23:28:04.395  INFO 7728 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-26 23:28:04.406  INFO 7728 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-1408"]
+2020-02-26 23:28:04.418  INFO 7728 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-26 23:28:04.418  INFO 7728 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-02-26 23:28:04.594  INFO 7728 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-26 23:28:04.595  INFO 7728 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2216 ms
+2020-02-26 23:28:04.862  INFO 7728 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-26 23:28:05.070  INFO 7728 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-26 23:28:06.087  INFO 7728 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-02-26 23:28:06.090  INFO 7728 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/a_spureb_box (MySQL 8.0)
+2020-02-26 23:28:06.249  INFO 7728 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.047s)
+2020-02-26 23:28:06.263  INFO 7728 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `a_spureb_box`: 2
+2020-02-26 23:28:06.264  INFO 7728 --- [           main] o.f.core.internal.command.DbMigrate      : Schema `a_spureb_box` is up to date. No migration necessary.
+2020-02-26 23:28:06.413  INFO 7728 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-26 23:28:06.470  INFO 7728 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-26 23:28:06.479  INFO 7728 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-1408"]
+2020-02-26 23:28:06.488  INFO 7728 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) 1408 (http) with context path ''
+2020-02-26 23:28:06.492  INFO 7728 --- [           main] com.spureb.willow.WillowApplication      : Started WillowApplication in 4.785 seconds (JVM running for 6.369)
+2020-02-26 23:28:08.515  INFO 7728 --- [nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1578530285; JSESSIONID=D9EBC17720ACC87E963CF26A080D2B92] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-02-26 23:28:08.524  INFO 7728 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-26 23:28:08.524  INFO 7728 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-26 23:28:08.534  INFO 7728 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms

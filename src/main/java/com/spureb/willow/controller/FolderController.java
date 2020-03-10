@@ -4,15 +4,16 @@ import com.spureb.willow.base.BaseErrorEnum;
 import com.spureb.willow.base.BaseResponse;
 import com.spureb.willow.entity.CloudFileVo;
 import com.spureb.willow.entity.DownloadRecord;
-import com.spureb.willow.entity.ResourceVo;
+import com.spureb.willow.entity.UserMenuListVo;
 import com.spureb.willow.service.SysFolderService;
 import com.sun.jmx.snmp.Timestamp;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.InputStreamSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -37,7 +38,7 @@ public class FolderController {
     @PostMapping( value = "/upload/file" )
     public BaseResponse getFolderList(Integer account){
         try {
-            List<ResourceVo> resourceVo = new ArrayList<>();
+            List<UserMenuListVo> resourceVo = new ArrayList<>();
             resourceVo = sysFolderService.getFolderList(account);
             return BaseResponse.create(resourceVo);
         }catch (Exception e){

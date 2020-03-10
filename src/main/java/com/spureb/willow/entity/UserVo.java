@@ -20,5 +20,5 @@ public class UserVo {
     /**
      * 用户拥有的菜单集合
      */
-    private List<ResourceVo> menuList;
+    private List<UserMenuListVo> menuList;
 }

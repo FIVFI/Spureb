@@ -1,6 +1,6 @@
 package com.spureb.willow.service.impl;
 
-import com.spureb.willow.entity.ResourceVo;
+import com.spureb.willow.entity.UserMenuListVo;
 import com.spureb.willow.mapper.SysFolderMapper;
 import com.spureb.willow.service.SysFolderService;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class SysFolderServiceImpl implements SysFolderService {
     SysFolderMapper sysFolderMapper;
 
     @Override
-    public List<ResourceVo> getFolderList(Integer account) {
+    public List<UserMenuListVo> getFolderList(Integer account) {
         try {
             return sysFolderMapper.getFolderList(account);
         }catch (Exception e){

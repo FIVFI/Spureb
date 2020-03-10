@@ -2,13 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spureb.willow.mapper.SysFolderMapper">
 
-    <select id="getFolderList" resultType="com.spureb.willow.entity.ResourceVo">
-        select folder_name as resourceName
-        ,folder_type as resourceType
-        ,folder_url as resourceUrl
-        ,folder_font as resourceFont
-        ,seq
-        from sys_resource_folder
+    <select id="getFolderList" resultType="com.spureb.willow.entity.UserMenuListVo">
+
     </select>
 
 </mapper>

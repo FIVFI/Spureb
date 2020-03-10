@@ -19,7 +19,7 @@ body{
 }
 .right-body{
     position: fixed;top: 50px;right: 0;bottom: 0;width: 48px;
-    background-color: rgba(37, 37 ,37 ,0.5);
+    background-color: rgba(30, 30 ,30 ,1);
     overflow:auto;
     overflow-x:hidden;
     display: none;
@@ -46,7 +46,7 @@ body{
 .panel-add-bottom{
     width: 100%;
     height: 35px;
-    position: absolute;bottom: 0;
+    position: absolute;bottom: 0;left: 0;right: 0;
     background-color: rgba(100, 100 ,100 ,0.1);
     color: rgba(250, 250 ,250 ,0.8);
     text-align: center;
@@ -148,7 +148,14 @@ body{
     cursor: pointer;
 }
 
+#showTab{
+    z-index: 1000;
+    height: 35px;font-size: 12px;
+    position: absolute;right: 0;
+    background-color: rgba(45,46,48,1);
+}
 .right-box{
+    z-index: 1000;
     text-align: center;
     color: grey;float: right;
 }
@@ -182,10 +189,24 @@ body{
     background-color: rgba(30, 30 ,30 ,1);
     transition: all 0.2s ease-in;
 }
+#tab-list{
+    width: 100%;height: 35px; background-color:#272727;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tabLeft{
+    width: 145px;
+    height: 35px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .tabLeft span{
     font-size: 13px;line-height: 35px;margin-left: 20px;
 }
 .tabRight{
+    width: 35px;
     height: 35px;font-size: 10px;
     text-align: center;
     color: grey;float: right;
@@ -203,7 +224,7 @@ body{
 ::-webkit-scrollbar
 {
     width:4%;
-    height:3%;
+    height:3px;
     border-radius:10px;
     background-color: rgba(30, 30 ,30 ,0);
 }

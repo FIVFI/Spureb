@@ -18,7 +18,7 @@
     </span>
 	  <span style="display:block">}</span>
 	  <span style="color: #777;font-style:italic;">
-		  // <a href="/login/verify">Go home!</a>
+		  // <a href="/login/Succeed" >Go home!</a>
 	  </span>
   </span>
 </div>

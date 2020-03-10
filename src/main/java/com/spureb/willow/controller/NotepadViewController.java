@@ -1,27 +1,48 @@
 package com.spureb.willow.controller;
 
-import com.spureb.willow.entity.NoteResourceVo;
-import com.spureb.willow.entity.UserVo;
 import com.spureb.willow.service.NoteResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 public class NotepadViewController {
+
 
 
     @Autowired
     NoteResourceService noteResourceService;
 
-    @GetMapping(value = "/notepad/myNote/view")
+    @Autowired
+    HttpServletRequest request;
+
+    @GetMapping(value = "/show/myNote/view")
     public ModelAndView myNoteView(Integer nId) {
         ModelAndView view = new ModelAndView();
         view.addObject("nId",nId);
+        view.addObject("host",request.getServerName());
         view.setViewName("controlPanel/show_md");
         return view;
     }
+    @GetMapping(value = "/share/myNote/view")
+    public ModelAndView shareMyNoteView(Integer nId) {
+        ModelAndView view = new ModelAndView();
+        view.addObject("nId",nId);
+        view.setViewName("controlPanel/show_share_md");
+        return view;
+    }
+
+
+    @GetMapping(value = "/notepad/myNote/view")
+    public ModelAndView notepadMyNoteView() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("notepad/myNote");
+        return view;
+    }
+
     @GetMapping(value = "/notepad/myCollect/view")
     public ModelAndView myCollectView() {
         ModelAndView view = new ModelAndView();
@@ -51,26 +72,6 @@ public class NotepadViewController {
         ModelAndView view = new ModelAndView();
         view.addObject("nId",nId);
         view.setViewName("controlPanel/richTextUpdate_md");
-        return view;
-    }
-
-    /**
-     * 前端主页入口
-     * @return
-     */
-    @GetMapping(value = "/login/verify")
-    public ModelAndView loginVerify() {
-        ModelAndView view = new ModelAndView();
-        UserVo userVo = new UserVo();
-        userVo.setCompanyId(1);
-        userVo.setUserId(1001);
-        userVo.setUserName("Spureb");
-        view.addObject("user", userVo);
-        NoteResourceVo noteResourceVo = new NoteResourceVo();
-        noteResourceVo.setByAuthor(1001);
-        view.addObject("user", userVo);
-        view.addObject("noteResourceList", noteResourceService.getNotePadMyNoteList(noteResourceVo).getData());
-        view.setViewName("home/home");
         return view;
     }
 

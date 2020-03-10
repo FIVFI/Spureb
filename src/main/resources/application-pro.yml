@@ -1,19 +1,16 @@
 server:
-    port: 443
+    port: 9888
     http:
-      port: 1122
-    ssl:
-      key-store: classpath:3019120_rfid.zanrun.net.pfx
-      key-store-password: IYsY3g68
-      key-store-type: PKCS12
+      port: 9527
+
 logging:
     config: classpath:logback.xml
 spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://rm-bp104o1iq86b1a6n9o.mysql.rds.aliyuncs.com:3306/a_transition?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useAffectedRows=true
-        username: root
-        password: zanrunA05
+        url: jdbc:mysql://localhost:3306/a_spureb_box?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useAffectedRows=true
+        username: admin
+        password: 123456
         redis:
             database: 0
             host: localhost
@@ -31,11 +28,8 @@ spring:
             enabled: true
             max-file-size: 100MB
             max-request-size: 100MB
-    thymeleaf:
-        cache: false
-        prefix: classpath:/templates
-        suffix: .html
-        mode: LEGACYHTML5
+    freemarker:
+        suffix: .ftlh
 mybatis-plus:
     mapper-locations: classpath:com/spureb/willow/mapper/**/*.xml
     configuration:

@@ -10,7 +10,7 @@ public class RoleVo {
     private Integer roleId         ;
     private String roleName  ;
     private String roleCode  ;
-    private Integer seq   ;
+    private Integer seq;
     private Integer available  ;
     private String canDelete ;
     private String createDate;
@@ -18,5 +18,5 @@ public class RoleVo {
     /**
      * 角色拥有的菜单集合
      */
-    private List<ResourceVo> menuList;
+    private List<UserMenuListVo> menuList;
 }

@@ -19,13 +19,13 @@
     <a href="">PureBook</a>
   </div>
 
-  <form name="form" action="/login/verify" method="get" style="margin-bottom: 100px">
+  <form name="form" action="/login" method="Post" style="margin-bottom: 100px">
     <div class="form">
       <div class="form-item">
-        <input type="text" id="userId" name="userId" required="required" placeholder="账号" autocomplete="off">
+        <input type="text" id="username" name="username" required="required" placeholder="账号" autocomplete="off">
       </div>
       <div class="form-item">
-        <input type="password" id="passWord" name="passWord" required="required" placeholder="密码" autocomplete="off">
+        <input type="password" id="password" name="password" required="required" placeholder="密码" autocomplete="off">
       </div>
       <div class="button-panel">
         <input type="submit" class="button" title="Sign In" value="登录">
@@ -40,7 +40,13 @@
 </div>
 <script src="/static/theme/login/fort.js"></script>
 <script type="text/javascript">
-  flash();
+  window.onload = function () {
+    flash();
+    var msg = "${msg!''}";
+    if (msg !== "") {
+      alert(msg);
+    }
+  };
 
 </script>
 

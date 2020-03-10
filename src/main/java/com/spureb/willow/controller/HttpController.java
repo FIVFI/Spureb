@@ -2,18 +2,9 @@ package com.spureb.willow.controller;
 
 import com.spureb.willow.base.BaseErrorEnum;
 import com.spureb.willow.base.BaseResponse;
-import com.spureb.willow.entity.ResourceVo;
-import com.spureb.willow.entity.ResponseBackDTO;
-import com.spureb.willow.service.SysFolderService;
-import com.spureb.willow.utils.JSONUtil;
 import com.spureb.willow.utils.OkHttpUtil;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 public class HttpController {

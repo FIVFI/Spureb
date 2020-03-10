@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="/static/editor.md-master/css/editormd.css" />
 <div id="test-editor" style="position: fixed;top: 0;left: 0;right: 0;bottom: 0">
-    <textarea id = "mdTextContent" style="display:none;"></textarea>
+    <textarea id = "mdTextContent" style="display:none;padding: 10px"></textarea>
 </div>
 <div id="showBtu">
     save
@@ -20,7 +20,7 @@
                     <input id="title" name="title" required="required" placeholder="文本标题" autocomplete="off"/>
                 </td>
                 <td style="width: 55px">
-                    <div class="label-title" id="saveBtu" style="display: none">
+                    <div class="label-title" id="saveBtu">
                         <i style="line-height: 55px;width: 55px;" class="fa fa-check"></i>
                     </div>
                 </td>

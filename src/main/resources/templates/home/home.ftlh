@@ -14,7 +14,7 @@
 </head>
 <style>
     body{
-        background: #1b1e21;
+        background: rgba(30,30,30,1);
     }
     .pen-file{
         position: absolute;width: 100%;bottom: 35px;top:35px;
@@ -44,6 +44,8 @@
       transition: all 0.2s ease-in;
       background-color: rgba(200,200,200,0.1);
       height: 35px;
+      text-overflow:inherit;
+      overflow:visible;
   }
   .pen-list-active{
       width: 100%;
@@ -59,13 +61,13 @@
 <body>
 <div class="header-body">
     <div class="left-box" style="line-height: 48px;width: 150px;text-align: center;">PureBook</div>
-    <div class="right-box"><i style="line-height: 48px;width: 50px;" class="fa fa-sign-out"></i></div>
+    <a href="/logout"><div class="right-box"><i style="line-height: 48px;width: 50px;" class="fa fa-sign-out"></i></div></a>
 </div>
 <div class="left-body">
-    <div class="menu-box menu-box-active"><i class="fa fa-users"></i></div>
-    <div class="menu-box"><i class="fa fa-book "></i></div>
-    <div class="menu-box"><i class="fa fa-cloud "></i></div>
-    <div class="menu-box"><i class="fa fa-cog "></i></div>
+<#--    <div class="menu-box"><i class="fa fa-users"></i></div>-->
+    <div class="menu-box menu-box-active"><i class="fa fa-book "></i></div>
+<#--    <div class="menu-box"><i class="fa fa-cloud "></i></div>-->
+<#--    <div class="menu-box"><i class="fa fa-user "></i></div>-->
     <div id="control-panel" class="control-panel">
         <div class="control-panel-show">
             <div class="panel-title">
@@ -75,46 +77,43 @@
             <div class="pen-file">
                 <div class="pen-list notepad" data-name="myNote">
                     <i style="color: seagreen" class="fa fa-bookmark"></i>
-                    <span>我的笔记</span>
+                    <span>文档</span>
                 </div>
-                <div class="pen-list notepad" data-name="myCollect">
-                    <i style="color: darkred" class="fa fa-bookmark"></i>
-                    <span>收藏文章</span>
-                </div>
-                <div class="pen-list notepad" data-name="noteCommunity">
-                    <i style="color: rebeccapurple" class="fa fa-bookmark"></i>
-                    <span>社区文字</span>
-                </div>
-                <div class="pen-list notepad" data-name="library">
-                    <i style="color: saddlebrown" class="fa fa-bookmark"></i>
-                    <span>图书馆</span>
-                </div>
-            </div>
-            <div class="panel-add-bottom" >
-                <div><span>+</span></div>
+<#--                <div class="pen-list notepad" data-name="myCollect">-->
+<#--                    <i style="color: darkred" class="fa fa-bookmark"></i>-->
+<#--                    <span>文章</span>-->
+<#--                </div>-->
+<#--                <div class="pen-list notepad" data-name="noteCommunity">-->
+<#--                    <i style="color: rebeccapurple" class="fa fa-bookmark"></i>-->
+<#--                    <span>社区</span>-->
+<#--                </div>-->
+<#--                <div class="pen-list notepad" data-name="library">-->
+<#--                    <i style="color: saddlebrown" class="fa fa-bookmark"></i>-->
+<#--                    <span>图书馆</span>-->
+<#--                </div>-->
             </div>
         </div>
 
         <div class="control-panel-show" id="control-panel-myNote">
             <div class="panel-title">
                 <div class="left-box box black-notepad"><i style="line-height: 35px;width: 40px" class="fa fa-caret-left"></i></div>
-                <div class="left-box"><span style="color: gray;font-size: 13px;line-height: 35px;margin-left: 10px">我的笔记</span></div>
+                <div class="left-box"><span style="color: gray;font-size: 13px;line-height: 35px;margin-left: 10px">文档</span></div>
                 <div class="right-box black-menu"><i style="line-height: 35px;width: 40px" class="fa fa-angle-left"></i></div>
             </div>
             <div class="pen-file">
-                <#list noteResourceList as item>
-                    <div class="pen-list addTab" data-url="/notepad/myNote/view?nId=${item.noteResourceId}" data-id="note_tbl${item.noteResourceId}" data-name="${item.noteTitle}">
-                        <i style="color: gray" class="fa fa-file-text"></i>
-                        <span>${item.noteTitle}</span>
-                    </div>
-
-                <#else>
-                    <div class="pen-list addTab" data-url="/hint/show" data-id="hint1001" data-name="提示">
-                        <i style="color: gray" class="fa fa-info-circle"></i>
-                        <span>空的</span>
-                    </div>
-                </#list>
-
+                <#if noteResourceList?exists>
+                    <#list noteResourceList as item>
+                        <div class="pen-list addTab" data-url="/show/myNote/view?nId=${item.noteResourceId}" data-id="note_tbl${item.noteResourceId}" data-name="${item.noteTitle}">
+                            <i style="color: gray" class="fa fa-file-text"></i>
+                            <span>${item.noteTitle}</span>
+                        </div>
+                    <#else>
+                        <div class="pen-list addTab" data-url="/hint/show" data-id="hint1001" data-name="提示">
+                            <i style="color: gray" class="fa fa-info-circle"></i>
+                            <span>空的</span>
+                        </div>
+                    </#list>
+                </#if>
             </div>
             <div class="panel-add-bottom">
                 <div><span>+</span></div>
@@ -123,25 +122,19 @@
         <div class="control-panel-show" id="control-panel-myCollect">
             <div class="panel-title">
                 <div class="left-box box black-notepad"><i style="line-height: 35px;width: 40px" class="fa fa-caret-left"></i></div>
-                <div class="left-box"><span style="color: gray;font-size: 13px;line-height: 35px;margin-left: 10px">我的笔记</span></div>
+                <div class="left-box"><span style="color: gray;font-size: 13px;line-height: 35px;margin-left: 10px">收藏</span></div>
                 <div class="right-box black-menu"><i style="line-height: 35px;width: 40px" class="fa fa-angle-left"></i></div>
             </div>
             <div class="pen-file">
-                <#list noteResourceList as item>
-                    <div class="pen-list addTab" data-url="/notepad/myNote/view?nId=${item.noteResourceId}" data-id="note_tbl${item.noteResourceId}" data-name="${item.noteTitle}">
-                        <i style="color: gray" class="fa fa-file-text"></i>
-                        <span>${item.noteTitle}</span>
+                    <div class="pen-list addTab" data-url="/hint/show" data-id="hint1001" data-name="提示">
+                        <i style="color: gray" class="fa fa-info-circle"></i>
+                        <span>空的</span>
                     </div>
-                <#else>
-                    Part executed when there are 0 items
-                </#list>
-
             </div>
             <div class="panel-add-bottom">
                 <div><span>+</span></div>
             </div>
         </div>
-
     </div>
 </div>
 <div class="right-body">
@@ -155,12 +148,11 @@
     <i class="fa fa-caret-left "></i>
 </div>
 <div id="main-body" ondblclick="hideMenu()" >
-    <div id="tab-list" style="width: 100%;height: 35px; background-color:#272727;">
-        <div class="right-box" style="height: 35px;font-size: 12px"><i style="line-height: 35px;width: 40px;" class="fa fa-align-justify"></i></div>
+    <div id="tab-list" >
+        <div id="showTab" onclick="tabListSpill()" class="right-box"><i style="line-height: 35px;width: 40px;" class="fa fa-align-justify"></i></div>
     </div>
     <div id="showIndexPage" class="tab_content"> <iframe class="show-panel" src="/test/show"></iframe> </div>
 </div>
-
 <#--    tab切换    -->
 <script src="/static/js/index.js"></script>
 <script>
